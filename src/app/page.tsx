@@ -59,6 +59,12 @@ const projArray = [
   },
 ];
 
+export const metadata = {
+  title: "Sai Rahul Urumu",
+  description:
+    "Official portfolio of Sai Rahul Urumu - Coder, Developer, and a Student.",
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
