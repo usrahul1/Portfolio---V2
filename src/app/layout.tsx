@@ -3,6 +3,7 @@
 import "./globals.css";
 import { useThemeStore } from "@/store/themeStore";
 import { Montserrat } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +23,10 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.className} transition-colors duration-300 ease-in-out`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
