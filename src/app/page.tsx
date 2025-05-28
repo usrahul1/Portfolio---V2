@@ -1,33 +1,72 @@
-import Header from "@/components/header";
-import profile from "../../public/profile.png";
+import FirstPage from "@/components/FirstPage";
+import Slider from "@/components/Slider";
+import TechStack from "@/components/TechStack";
+import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+
+const tilesData = [
+  {
+    titleImg:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742751487/ghfv4n99156j6mbv9xne.jpg",
+    titleName: "Pragnya Club Member",
+    titleDesc: "Top 10 coder of GITAM.",
+    titleYear: "2023-01-01",
+  },
+  {
+    titleImg:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742752010/snsfhzuh00xqkwraxpun.png",
+    titleName: "Master Coder",
+    titleDesc: "Master League in Code 360.",
+    titleYear: "2025-01-01",
+  },
+  {
+    titleImg:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742752088/v1lppjcmaocjfeylne6q.png",
+    titleName: "Competitive Programmer",
+    titleDesc: "Ranked #1 in GITAM in Code 360.",
+    titleYear: "2025-01-01",
+  },
+  {
+    titleImg:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742752148/zzrs8xzaxthqsokyrn37.png",
+    titleName: "LeetCode",
+    titleDesc: "Solved more than 350 problems.",
+    titleYear: "2025-01-01",
+  },
+];
+
+const projArray = [
+  {
+    image:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742749981/spgseslfzcmkvnicrkqr.png",
+    projectTitle: "easyBike",
+    projDesc: "Peer-To-Peer Bike Rental Platform.",
+    githubLink: "https://github.com/usrahul1/easyBike",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742750688/rs4wwedosjpdwm3vi7be.png",
+    projectTitle: "Chat Cord",
+    projDesc: "Chat in Real Time.",
+    githubLink: "https://github.com/usrahul1/ChatCord",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1748436098/oiamclefpgycxiuixsde.png",
+    projectTitle: "motoHealth",
+    projDesc: "Helps new car buyers compare vehicles.",
+    githubLink: "https://github.com/usrahul1/motoHealth",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen border-2 border-black flex flex-col items-center">
-      <Header />
-      <div className="w-full flex justify-center mt-10">
-        <div
-          className="flex flex-col items-center gap-4 
-          bg-white/3 backdrop-blur-md border border-white/30 
-          rounded-xl shadow-md p-6 w-[90%] max-w-lg"
-        >
-          <div className="avatar">
-            <div className="ring-success ring-offset-base-100 w-24 rounded-full ring-2 ring-offset-2">
-              <img src={profile.src} />
-            </div>
-          </div>
-          <h2 className="text-md xs:text-xl sm:text-2xl md:text-3xl font-semibold text-center">
-            Hi, I'm <span className="">Rahul.</span>
-          </h2>
-          <div className="flex gap-2 border-2 border-gray-300 px-4 py-1 rounded-full items-center text-sm xs:text-md sm:text-lg md:text-xl">
-            <div className="inline-grid *:[grid-area:1/1]">
-              <div className="status rounded-full status-success animate-ping"></div>
-              <div className="status rounded-full status-success"></div>
-            </div>
-            Ready for collaboration.
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <FirstPage />
+      <Slider titleArray={tilesData} />
+      <TechStack />
+      <Projects projArray={projArray} />
+      <Footer />
     </div>
   );
 }

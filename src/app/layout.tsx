@@ -2,12 +2,12 @@
 
 import "./globals.css";
 import { useThemeStore } from "@/store/themeStore";
-import { Nunito } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const nunito = Nunito({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-nunito",
+  variable: "--font-montserrat",
 });
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html
       data-theme={theme}
       lang="en"
-      className={`${nunito.className} transition-colors duration-300 ease-in-out`}
+      className={`${montserrat.className} transition-colors duration-300 ease-in-out`}
     >
       <body>{children}</body>
     </html>
