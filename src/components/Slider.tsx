@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type TitleItem = {
   titleImg: string;
@@ -48,11 +49,14 @@ export default function Slider({ titleArray }: SliderProps) {
                     key={index}
                     className="flex gap-4 bg-white/5 shadow-md backdrop-blur-md border border-white/30 rounded-md px-4 py-2 items-center whitespace-nowrap flex-shrink-0 mx-4"
                   >
-                    <img
-                      src={item.titleImg}
-                      alt={item.titleName}
-                      className="w-12 h-12 object-contain rounded-full"
-                    />
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                      <Image
+                        src={item.titleImg}
+                        alt={item.titleName}
+                        fill
+                        className="object-contain rounded-full"
+                      />
+                    </div>
                     <div className="text-sm">
                       <h4 className="font-semibold">{item.titleName}</h4>
                       <h5 className="text-zinc-500">{item.titleDesc}</h5>

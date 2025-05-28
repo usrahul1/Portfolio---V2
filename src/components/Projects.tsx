@@ -1,4 +1,5 @@
 import { GrProjects } from "react-icons/gr";
+import Image from "next/image";
 
 type Project = {
   image: string;
@@ -31,11 +32,12 @@ export default function Projects({ projArray }: ProjectsProps) {
                 key={index}
                 className="cursor-pointer w-72 sm:w-64 h-72 sm:h-64 rounded-lg overflow-hidden flex flex-col border border-white/30 bg-white/3 p-3 transition shadow-xl"
               >
-                <div className="w-full h-36 overflow-hidden rounded">
-                  <img
+                <div className="w-full h-36 overflow-hidden rounded relative">
+                  <Image
                     src={proj.image}
                     alt={proj.projectTitle}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <h2 className="text-lg font-semibold mt-3">

@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import profile from "../../public/profile.png";
 import Typing from "@/components/typer";
 import { Architects_Daughter } from "next/font/google";
+import Image from "next/image";
 
 const architects = Architects_Daughter({
   subsets: ["latin"],
@@ -19,13 +20,18 @@ export default function FirstPage() {
           rounded-xl shadow-md p-10 w-[90%] max-w-4xl"
         >
           <div className="avatar">
-            <div className="ring-success ring-offset-base-100 w-32 rounded-full ring-2 ring-offset-2">
-              <img src={profile.src} />
+            <div className="ring-success ring-offset-base-100 w-32 h-32 relative rounded-full ring-2 ring-offset-2 overflow-hidden">
+              <Image
+                src={profile.src}
+                alt="Profile image"
+                fill
+                className="object-cover rounded-full"
+              />
             </div>
           </div>
           <div className="">
             <h2 className="text-xl base:text-2xl sm:text-3xl md:text-4xl font-[550] text-center">
-              Heya, I'm&nbsp;
+              Heya, I&apos;m&nbsp;
               <span
                 className={`${architects.className} text-2xl xs:text-3xl sm:text-4xl md:text-5xl glitch-add`}
               >

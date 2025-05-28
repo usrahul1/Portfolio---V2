@@ -1,11 +1,9 @@
 "use client";
 
 import { useThemeStore } from "@/store/themeStore";
-import { useState } from "react";
 
 export default function ThemeShifter() {
   const { theme, setTheme } = useThemeStore();
-  const [input, setInput] = useState("light");
 
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newTheme = e.target.checked ? "black" : "light";
