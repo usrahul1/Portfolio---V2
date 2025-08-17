@@ -46,7 +46,7 @@ const projArray = [
   {
     image:
       "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1755443587/Screenshot_2025-08-17_204202_i8e1ui.png",
-    projectTitle: "SmartCart AI - Walmart Sparkathon",
+    projectTitle: "SmartCart AI - Walmart Sparkathon Project",
     projDesc: "Smart AI assistant.",
     githubLink: "https://github.com/usrahul1/SmartCart-AI-Walmart-Sparkathon",
   },
