@@ -45,10 +45,10 @@ const projArray = [
   },
   {
     image:
-      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1742750688/rs4wwedosjpdwm3vi7be.png",
-    projectTitle: "Chat Cord",
-    projDesc: "Chat in Real Time.",
-    githubLink: "https://github.com/usrahul1/ChatCord",
+      "https://res.cloudinary.com/dkwsaqfz6/image/upload/v1755443587/Screenshot_2025-08-17_204202_i8e1ui.png",
+    projectTitle: "SmartCart AI - Walmart Sparkathon",
+    projDesc: "Smart AI assistant.",
+    githubLink: "https://github.com/usrahul1/SmartCart-AI-Walmart-Sparkathon",
   },
   {
     image:
