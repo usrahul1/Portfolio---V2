@@ -14,7 +14,6 @@ import {
   SiLangchain,
   SiHuggingface
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
 import { FaAws } from "react-icons/fa";
 
 const techStack = [
